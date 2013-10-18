@@ -12,7 +12,7 @@ Commands:
 * **/db saynp** - displays information about the current track in a channel
 * **/db play** - resumes playback if track is paused, plays the selected song* if a track is already playing
 * **/db pause** - pauses current track
-* **/db next**, **/dbprev** - loads next/previous track in playlist
+* **/db next**, **/db prev** - loads next/previous track in playlist
 * **/db stop** - stops current track
 * **/db exit** - closes DeaDBeeF
 
@@ -30,7 +30,7 @@ If your distribution does not provide packages for those softwares, compile them
 
 ### Installation
 
-Installing XChat-DeaDBeeF is pretty straightforward.
+Installing WeeChat-DeaDBeeF is pretty straightforward.
 
 * Hard copy:
     1. Clone the Git repository to any folder (or, alternatively, download the source tarball).
@@ -42,6 +42,19 @@ Installing XChat-DeaDBeeF is pretty straightforward.
 
 WeeChat-DeaDBeeF will now be automatically loaded upon launching WeeChat.
 
+### WeeChat options
+
+WeeChat-DeaDBeeF supports a few options by default. They are prefixed by **_plugins.var.python.deadbeef_**.
+
+_np.*_ and _saynp.*_ use DeaDBeeF's built-in track information formatting. Check the [official guide](http://sourceforge.net/apps/mediawiki/deadbeef/index.php?title=Title_Formatting "SourceForge.net: Title Formatting - deadbeef") to customize those options.
+
+* **autostart** - launch DeaDBeeF when WeeChart starts (default: off)
+* **deadbeef** - path to the DeaDBeeF binary file (default: deadbeef)
+* **np.string** - string that prefixes the track information with /db np (default: "You are listening to:", don't add a space at the end)
+* **np.verbose** - track information with /db np (default: "%t by %a - from %b (%y)", example: "_Gray Pianos Flying_ by _Shawn Lane_ - from _Powers of Ten_ (_1992_)")
+* **saynp.string** - string that prefixes track information with /db saynp (default: "NP:", don't add a space at the end)
+* **saynp.verbose** - track information with /db saynp (default: "%t by %a - from %b (%y)", example: "_Gray Pianos Flying_ by _Shawn Lane_ - from _Powers of Ten_ (_1992_)")
+* **saynp.me** - use /db saynp with /me (default: off, example: "/me _NP: song_")
 
 ### Contribution
 
